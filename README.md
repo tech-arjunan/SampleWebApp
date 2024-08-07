@@ -1,2 +1,3 @@
-This repository demonstrates a straightforward implementation of a generic repository pattern and its integration within a controller using dependency injection. 
-It includes NUnit test cases for the repositories and utilizes Moq to mock dependencies for controller testing.
+I have implemented a simple generic repository pattern and used NUnit and Moq frameworks for unit testing. The repository is injected into the ProductController via dependency injection, allowing me to successfully write unit test cases for both the ProductRepository and ProductController.
+
+However, for the UserController, the test cases fail because the UserController directly instantiates the UserRepository instead of using dependency injection. Consequently, the mock repository set up in the UserControllerTests is not utilized, making it challenging to mock dependencies effectively for testing.
